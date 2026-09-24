@@ -1,0 +1,1209 @@
+/* ==================================================
+   RESET
+================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0b0b0b;
+    color: #eeeeee;
+    font-family: "Inter", sans-serif;
+    line-height: 1.6;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* ==================================================
+   NAVIGATION
+================================================== */
+
+.navbar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    height: 78px;
+
+    padding: 0 7%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background: rgba(11, 11, 11, 0.94);
+
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid #242424;
+
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+
+    flex-direction: column;
+
+    line-height: 1;
+}
+
+.logo strong {
+    font-size: 18px;
+
+    letter-spacing: 3px;
+}
+
+.logo span {
+    margin-top: 6px;
+
+    font-size: 7px;
+
+    letter-spacing: 3px;
+
+    color: #777;
+}
+
+nav {
+    display: flex;
+
+    gap: 24px;
+}
+
+nav a {
+    color: #888;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: white;
+}
+
+.menu-button {
+    display: none;
+
+    border: none;
+
+    background: none;
+
+    color: white;
+
+    font-size: 25px;
+
+    cursor: pointer;
+}
+
+
+/* ==================================================
+   HERO
+================================================== */
+
+.hero {
+    min-height: 100vh;
+
+    padding: 150px 8% 90px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 0.8fr;
+
+    align-items: center;
+
+    gap: 80px;
+}
+
+.label {
+    display: block;
+
+    margin-bottom: 25px;
+
+    color: #777;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+}
+
+.hero h1 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(60px, 8vw, 110px);
+
+    line-height: 0.9;
+
+    font-weight: 500;
+}
+
+.hero h1 em {
+    display: block;
+
+    color: #777;
+
+    font-style: normal;
+}
+
+.hero h2 {
+    margin-top: 35px;
+
+    font-size: 18px;
+
+    font-weight: 400;
+
+    letter-spacing: 2px;
+}
+
+.hero-text > p {
+    max-width: 500px;
+
+    margin-top: 20px;
+
+    color: #888;
+}
+
+.buttons {
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 35px;
+}
+
+.button {
+    display: inline-block;
+
+    padding: 14px 24px;
+
+    border: 1px solid #555;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+
+    cursor: pointer;
+}
+
+.button.primary {
+    background: white;
+
+    color: black;
+
+    border-color: white;
+}
+
+.button.primary:hover {
+    background: transparent;
+
+    color: white;
+}
+
+.button.secondary:hover {
+    background: white;
+
+    color: black;
+}
+
+.hero-image {
+    border: 1px solid #333;
+
+    padding: 10px;
+}
+
+.hero-image img {
+    height: 650px;
+
+    object-fit: cover;
+}
+
+.image-number {
+    padding-top: 10px;
+
+    color: #666;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+}
+
+
+/* ==================================================
+   GENERAL SECTIONS
+================================================== */
+
+.section {
+    padding: 120px 8%;
+
+    border-top: 1px solid #222;
+}
+
+.section-heading {
+    margin-bottom: 65px;
+}
+
+.section-heading > span {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: #666;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+}
+
+.section-heading h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(45px, 6vw, 75px);
+
+    font-weight: 500;
+
+    line-height: 1;
+}
+
+.section-heading > p {
+    max-width: 600px;
+
+    margin-top: 20px;
+
+    color: #777;
+
+    font-size: 13px;
+}
+
+
+/* ==================================================
+   PROFILE
+================================================== */
+
+.profile {
+    background: #101010;
+}
+
+.profile-grid {
+    display: grid;
+
+    grid-template-columns: 1.3fr 0.7fr;
+
+    gap: 100px;
+}
+
+.profile-introduction {
+    max-width: 750px;
+}
+
+.profile-introduction p {
+    margin-bottom: 25px;
+
+    color: #888;
+
+    font-size: 14px;
+}
+
+.profile-introduction .big-text {
+    font-family: "Playfair Display", serif;
+
+    color: #eee;
+
+    font-size: 29px;
+
+    line-height: 1.3;
+}
+
+.profile-facts {
+    border-top: 1px solid #333;
+}
+
+.profile-facts div {
+    padding: 22px 0;
+
+    border-bottom: 1px solid #333;
+}
+
+.profile-facts span {
+    display: block;
+
+    color: #666;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 6px;
+}
+
+.profile-facts strong {
+    font-size: 13px;
+
+    font-weight: 500;
+}
+
+
+/* ==================================================
+   RESUME
+================================================== */
+
+.resume-section {
+    background: #0b0b0b;
+}
+
+.resume {
+    max-width: 950px;
+
+    margin: auto;
+
+    padding: 55px;
+
+    background: #f5f5f5;
+
+    color: #111;
+}
+
+.resume-header {
+    border-bottom: 2px solid #111;
+
+    padding-bottom: 25px;
+
+    margin-bottom: 25px;
+}
+
+.resume-header h3 {
+    font-size: 25px;
+
+    letter-spacing: 2px;
+}
+
+.resume-header p {
+    margin-top: 5px;
+
+    font-size: 13px;
+
+    color: #555;
+}
+
+.resume-contact {
+    margin-top: 10px;
+
+    font-size: 9px;
+
+    color: #777;
+
+    letter-spacing: 1px;
+}
+
+.resume-block {
+    margin-bottom: 25px;
+}
+
+.resume-block h4 {
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    border-bottom: 1px solid #ccc;
+
+    padding-bottom: 7px;
+
+    margin-bottom: 12px;
+}
+
+.resume-block p {
+    font-size: 10px;
+
+    line-height: 1.6;
+}
+
+.resume-skills {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+}
+
+.resume-skills span {
+    border: 1px solid #aaa;
+
+    padding: 5px 8px;
+
+    font-size: 8px;
+}
+
+.resume-row {
+    display: grid;
+
+    grid-template-columns: 1fr auto;
+
+    gap: 30px;
+
+    margin-bottom: 18px;
+}
+
+.resume-row strong {
+    font-size: 11px;
+}
+
+.resume-row p {
+    margin-top: 2px;
+
+    color: #666;
+}
+
+.resume-row > span {
+    font-size: 8px;
+
+    color: #777;
+}
+
+.resume-row ul {
+    margin-top: 6px;
+
+    padding-left: 15px;
+}
+
+.resume-row li {
+    font-size: 9px;
+
+    margin-bottom: 3px;
+}
+
+.resume-download {
+    text-align: center;
+
+    margin-top: 35px;
+}
+
+
+/* ==================================================
+   WORK SAMPLES
+================================================== */
+
+.work-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 55px 30px;
+}
+
+.work-card {
+    overflow: hidden;
+}
+
+.work-image {
+    position: relative;
+
+    border: 1px solid #333;
+}
+
+.work-image img {
+    height: 550px;
+
+    object-fit: cover;
+
+    transition: 0.5s;
+}
+
+.work-card:hover img {
+    transform: scale(1.02);
+}
+
+.view-button {
+    position: absolute;
+
+    right: 15px;
+
+    bottom: 15px;
+
+    padding: 10px 15px;
+
+    background: rgba(0, 0, 0, 0.8);
+
+    color: white;
+
+    border: 1px solid #555;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+}
+
+.work-info {
+    padding-top: 18px;
+}
+
+.work-info > span {
+    color: #666;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+}
+
+.work-info h3 {
+    margin-top: 6px;
+
+    font-size: 20px;
+
+    font-weight: 500;
+}
+
+.work-info p {
+    margin-top: 8px;
+
+    max-width: 500px;
+
+    color: #777;
+
+    font-size: 12px;
+}
+
+.work-info small {
+    display: block;
+
+    margin-top: 12px;
+
+    color: #555;
+
+    font-size: 9px;
+}
+
+
+/* ==================================================
+   CASE STUDIES
+================================================== */
+
+.cases {
+    background: #101010;
+}
+
+.case-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+}
+
+.case-card {
+    padding: 40px;
+
+    border: 1px solid #333;
+}
+
+.case-number {
+    color: #666;
+
+    font-size: 8px;
+
+    letter-spacing: 3px;
+}
+
+.case-card h3 {
+    margin: 25px 0 35px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 29px;
+
+    font-weight: 500;
+
+    line-height: 1.1;
+}
+
+.star {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.star div {
+    padding-top: 18px;
+
+    border-top: 1px solid #333;
+}
+
+.star strong {
+    display: block;
+
+    color: #aaa;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+}
+
+.star p {
+    margin-top: 8px;
+
+    color: #777;
+
+    font-size: 11px;
+}
+
+
+/* ==================================================
+   CREDENTIALS
+================================================== */
+
+.credential-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.credential-card {
+    padding: 20px;
+
+    border: 1px solid #333;
+}
+
+.certificate-placeholder {
+    height: 230px;
+
+    background: #171717;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px dashed #444;
+}
+
+.certificate-placeholder span {
+    color: #666;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+}
+
+.certificate-placeholder strong {
+    margin-top: 12px;
+
+    color: #aaa;
+
+    font-size: 12px;
+}
+
+.credential-card h3 {
+    margin-top: 20px;
+
+    font-size: 16px;
+
+    font-weight: 500;
+}
+
+.credential-card p {
+    margin-top: 8px;
+
+    color: #777;
+
+    font-size: 11px;
+}
+
+
+/* ==================================================
+   REFERENCES
+================================================== */
+
+.references {
+    background: #101010;
+}
+
+.reference-card {
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 45px;
+
+    border: 1px solid #333;
+
+    display: grid;
+
+    grid-template-columns: 70px 1fr;
+
+    gap: 30px;
+}
+
+.reference-icon {
+    font-family: "Playfair Display", serif;
+
+    font-size: 80px;
+
+    line-height: 0.5;
+
+    color: #555;
+}
+
+.quote {
+    font-family: "Playfair Display", serif;
+
+    font-size: 23px;
+
+    line-height: 1.4;
+
+    color: #ddd;
+}
+
+.reference-person {
+    display: flex;
+
+    flex-direction: column;
+
+    margin-top: 25px;
+}
+
+.reference-person strong {
+    font-size: 12px;
+}
+
+.reference-person span {
+    margin-top: 3px;
+
+    color: #666;
+
+    font-size: 9px;
+}
+
+
+/* ==================================================
+   PRIVACY
+================================================== */
+
+.privacy {
+    padding: 90px 8%;
+
+    background: #151515;
+
+    border-top: 1px solid #333;
+
+    border-bottom: 1px solid #333;
+}
+
+.privacy > div {
+    max-width: 850px;
+
+    margin: auto;
+}
+
+.privacy span {
+    color: #777;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+}
+
+.privacy h2 {
+    margin: 20px 0;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 40px;
+
+    font-weight: 500;
+}
+
+.privacy p {
+    margin-bottom: 15px;
+
+    color: #888;
+
+    font-size: 12px;
+}
+
+
+/* ==================================================
+   CONTACT
+================================================== */
+
+.contact {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 100px;
+}
+
+.contact > div > span {
+    color: #666;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+}
+
+.contact h2 {
+    margin-top: 20px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(45px, 6vw, 75px);
+
+    font-weight: 500;
+
+    line-height: 1;
+}
+
+.contact-details {
+    padding-top: 50px;
+}
+
+.contact-details p {
+    max-width: 350px;
+
+    color: #777;
+
+    font-size: 13px;
+}
+
+.contact-details > a {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 25px;
+
+    border-bottom: 1px solid #555;
+}
+
+.socials {
+    display: flex;
+
+    gap: 25px;
+
+    margin-top: 45px;
+}
+
+.socials a {
+    color: #777;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+}
+
+.socials a:hover {
+    color: white;
+}
+
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+footer {
+    padding: 35px 8%;
+
+    border-top: 1px solid #222;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+footer div {
+    display: flex;
+
+    flex-direction: column;
+}
+
+footer strong {
+    font-size: 11px;
+
+    letter-spacing: 2px;
+}
+
+footer span,
+footer p,
+footer > a {
+    color: #666;
+
+    font-size: 9px;
+}
+
+
+/* ==================================================
+   MODAL
+================================================== */
+
+.modal {
+    position: fixed;
+
+    inset: 0;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 30px;
+
+    background: rgba(0, 0, 0, 0.96);
+
+    z-index: 3000;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal img {
+    max-width: 90%;
+
+    max-height: 90vh;
+
+    width: auto;
+}
+
+#closeModal {
+    position: absolute;
+
+    top: 25px;
+
+    right: 35px;
+
+    background: none;
+
+    border: none;
+
+    color: white;
+
+    font-size: 40px;
+
+    cursor: pointer;
+}
+
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+
+@media (max-width: 1000px) {
+
+    nav {
+        gap: 12px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .credential-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .menu-button {
+        display: block;
+    }
+
+    nav {
+        display: none;
+
+        position: absolute;
+
+        top: 78px;
+
+        left: 0;
+
+        width: 100%;
+
+        padding: 25px 7%;
+
+        background: #0b0b0b;
+
+        border-bottom: 1px solid #333;
+
+        flex-direction: column;
+
+        gap: 18px;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .work-grid,
+    .case-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .section {
+        padding: 85px 6%;
+    }
+
+    .hero {
+        padding: 130px 6% 70px;
+    }
+
+    .hero-image img {
+        height: 450px;
+    }
+
+    .buttons {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .resume {
+        padding: 25px;
+    }
+
+    .resume-row {
+        grid-template-columns: 1fr;
+    }
+
+    .work-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .work-image img {
+        height: 450px;
+    }
+
+    .credential-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reference-card {
+        grid-template-columns: 1fr;
+
+        padding: 30px;
+    }
+
+    .reference-icon {
+        font-size: 50px;
+    }
+
+    .quote {
+        font-size: 18px;
+    }
+
+    footer {
+        flex-direction: column;
+
+        gap: 15px;
+
+        text-align: center;
+    }
+
+}
+
+
+/* ==================================================
+   PRINTABLE RÉSUMÉ
+================================================== */
+
+@media print {
+
+    body {
+        background: white;
+
+        color: black;
+    }
+
+    .navbar,
+    .resume-download,
+    footer {
+        display: none !important;
+    }
+
+    .resume-section {
+        padding: 0;
+
+        border: none;
+    }
+
+    .section-heading {
+        display: none;
+    }
+
+    .resume {
+        width: 100%;
+
+        max-width: none;
+
+        padding: 0;
+
+        margin: 0;
+
+        background: white;
+
+        color: black;
+    }
+
+    .resume-block {
+        break-inside: avoid;
+    }
+
+}
